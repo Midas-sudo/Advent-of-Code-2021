@@ -1,8 +1,8 @@
-//Day 1
 const fs = require("fs");
 
-const file = fs.readFileSync("input.txt", "utf-8");
 var lines = [];
+var part = process.argv.slice(2)[0];
+var example = process.argv.slice(2)[1];
 
 file.split(/\r?\n/).forEach((line) => {
   lines.push(line);
@@ -45,4 +45,34 @@ function part2() {
   console.log(incre_count, decres_count);
 }
 
-part2();
+switch (part) {
+  case "part1":
+    if (example) {
+      const file = fs.readFileSync("example.txt", "utf-8");
+      file.split(/\r?\n/).forEach((line) => {
+        lines.push(line);
+      });
+    } else {
+      const file = fs.readFileSync("input.txt", "utf-8");
+      file.split(/\r?\n/).forEach((line) => {
+        lines.push(line);
+      });
+    }
+    part1();
+    break;
+  case "part2":
+    if (example) {
+      const file = fs.readFileSync("example.txt", "utf-8");
+      file.split(/\r?\n/).forEach((line) => {
+        lines.push(line);
+      });
+    } else {
+      const file = fs.readFileSync("input.txt", "utf-8");
+      file.split(/\r?\n/).forEach((line) => {
+        lines.push(line);
+      });
+    }
+    part2();
+    break;
+}
+
