@@ -1,3 +1,4 @@
+//Day 1
 const fs = require("fs");
 
 const file = fs.readFileSync("input.txt", "utf-8");
